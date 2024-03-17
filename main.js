@@ -6,12 +6,12 @@
 
 // const  
 
-// var is a function scope
-function varTest(){
-    var x = 1;
+// let is a code block scope
+function letTest(){
+    let x = 1;
 
     if(true){
-        var x = 2;
+        let x = 2;
 
         console.log(x);
     }
@@ -20,7 +20,7 @@ function varTest(){
     return "Done";
 }
 
-console.log(varTest());
+console.log(letTest());
 //2
-//2
+//1
 //Done 
