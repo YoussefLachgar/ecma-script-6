@@ -28,8 +28,11 @@ const
 
 */ 
 
-var vr1 = 1;
-let vr2 = 2;
+const vr1 = {
+    'name': 'yousarsif',
+    'property': 'noting'
+};
+Object.freeze(vr1);
+vr1.name = 'youha bakh';
 
-console.log(window.vr1);
-console.log(window.vr2);
+console.log(vr1);
