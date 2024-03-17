@@ -1,26 +1,35 @@
-// let,const 
+/*
+let,const 
 
-// let 
+var
+    -Function scope
+    -Can be reDeclared
+    -Can reAsigne
+    -Undefined when accessing a variable before its deration
+    -Creating a properties in th widow object
 
-// var 
 
-// const  
+let 
+    -Block scope
+    -Cannot be reDeclared
+    -Can reAsigne
+    -RefrenceError when accessing a variable before its deration
+    -Does not creating a properties in the widow object
 
-// let is a code block scope
-function letTest(){
-    let x = 1;
 
-    if(true){
-        let x = 2;
 
-        console.log(x);
-    }
+const 
+    -Block scope
+    -Cannot be reDeclared
+    -Can reAsigne
+    -RefrenceError when accessing a variable before its deration
+    -Does not creating a properties in the widow object
 
-    console.log(x);
-    return "Done";
-}
 
-console.log(letTest());
-//2
-//1
-//Done 
+*/ 
+
+var vr1 = 1;
+let vr2 = 2;
+
+console.log(window.vr1);
+console.log(window.vr2);
