@@ -28,6 +28,9 @@ const
 
 */ 
 
-const fileExtension = (fileName) => fileName.slice(fileName.lastIndexOf('.'));
+const replaceCharacterInString = (originalString, targetCharacter, replacementCharacter) => originalString
+    .split('')
+    .map(char => (char === targetCharacter) ? replacementCharacter : char)
+    .join('');
 
-console.log(fileExtension("index.get.js"));
+console.log(replaceCharacterInString("index.get.js", "e", "v"));
