@@ -28,9 +28,12 @@ const
 
 */ 
 
-const replaceCharacterInString = (originalString, targetCharacter, replacementCharacter) => originalString
-    .split('')
-    .map(char => (char === targetCharacter) ? replacementCharacter : char)
-    .join('');
+const formatDate = (date = new Date()) => {
+    const days = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
 
-console.log(replaceCharacterInString("index.get.js", "e", "v"));
+    return `${days}/${month}/${year}`;
+}
+
+console.log(formatDate());
