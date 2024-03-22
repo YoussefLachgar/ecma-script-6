@@ -28,6 +28,6 @@ const
 
 */ 
 
-const firstHalfString = (str) =>   str.slice(0,str.length / 2);
+const concatenateTwoString = (fstr, sstr) =>   fstr + sstr;
 
-console.log(firstHalfString('shantha'));
+console.log(concatenateTwoString('shan',"than"));
