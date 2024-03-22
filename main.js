@@ -28,6 +28,13 @@ const
 
 */ 
 
-const closestTo100 = (a, b) =>   (100 - a) < (100 - b) ? a : b;
+const countOccurenceChar = (str, char) =>   str.split('').filter( ch => ch === char).length;
 
-console.log(closestTo100(1,77));
+const occurenceBetween2and4 = (str, char) => 
+countOccurenceChar(str, char) >= 2 && countOccurenceChar(str, char) <= 4;
+
+console.log(occurenceBetween2and4('oh!','o'));
+console.log(occurenceBetween2and4('ooh!','o'));
+console.log(occurenceBetween2and4('ooh!','o'));
+console.log(occurenceBetween2and4('ooooh!','o'));
+console.log(occurenceBetween2and4('oooooh!','o'));
