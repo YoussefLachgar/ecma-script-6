@@ -28,12 +28,6 @@ const
 
 */ 
 
-const formatDate = (date = new Date()) => {
-    const days = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
+const makeNewString = (str) =>  str.length < 3 ? str : str.slice(0,3) + str.slice(-3);
 
-    return `${days}/${month}/${year}`;
-}
-
-console.log(formatDate());
+console.log(makeNewString('shanthan'));
