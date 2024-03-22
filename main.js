@@ -28,6 +28,6 @@ const
 
 */ 
 
-const concatenateTwoString = (fstr, sstr) =>   fstr + sstr;
+const closestTo100 = (a, b) =>   (100 - a) < (100 - b) ? a : b;
 
-console.log(concatenateTwoString('shan',"than"));
+console.log(closestTo100(1,77));
