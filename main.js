@@ -28,13 +28,6 @@ const
 
 */ 
 
-const countOccurenceChar = (str, char) =>   str.split('').filter( ch => ch === char).length;
+const oddNumbers = (numbers) =>   numbers.filter( num => num % 2 !== 0).length;
 
-const occurenceBetween2and4 = (str, char) => 
-countOccurenceChar(str, char) >= 2 && countOccurenceChar(str, char) <= 4;
-
-console.log(occurenceBetween2and4('oh!','o'));
-console.log(occurenceBetween2and4('ooh!','o'));
-console.log(occurenceBetween2and4('ooh!','o'));
-console.log(occurenceBetween2and4('ooooh!','o'));
-console.log(occurenceBetween2and4('oooooh!','o'));
+console.log(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
