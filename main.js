@@ -28,9 +28,7 @@ const
 
 */ 
 
-const largestEven = (arr) =>  Math.max(...arr.filter( (x) => x % 2 === 0));
+const replaceFirstDigit = (str) =>  str.replace(/[0-9]/, '$');
 
 
-console.log(largestEven([1,2,3,4,5]));
-console.log(largestEven([1,2,6,4,5]));
-console.log(largestEven([1,2,6,4,5,66,77,44]));
+console.log(replaceFirstDigit('htyr1hg5'));
