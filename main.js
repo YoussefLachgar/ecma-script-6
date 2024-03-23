@@ -28,20 +28,17 @@ const
 
 */ 
 
-const oddNumbersUpToTheANumber = (num) => {
-    return Math.floor((num - 1) / 2) + 1;
-}
+const isAscending = (numbers) =>  {
 
-const countOddNumbers = (numbers) =>   numbers.filter( num => num % 2 !== 0).length;
-
-const creatArrayOfNumbers = (num) => {
-    const array = [] ;
-
-    for(let i = 1 ; i <= num ; i++) {
-        array.push(i);
+    for(let i = 0; i < numbers.length; i++) {
+        if(numbers[i+1] < numbers[i]){
+            return false;
+        }
     }
-    return array;
+
+    return true;
 }
 
-console.log(countOddNumbers(creatArrayOfNumbers(130)));
-console.log(oddNumbersUpToTheANumber(130));
+
+console.log(isAscending([1,2,3,4,5]));
+console.log(isAscending([1,2,6,4,5]));
