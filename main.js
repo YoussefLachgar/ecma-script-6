@@ -28,17 +28,9 @@ const
 
 */ 
 
-const isAscending = (numbers) =>  {
-
-    for(let i = 0; i < numbers.length; i++) {
-        if(numbers[i+1] < numbers[i]){
-            return false;
-        }
-    }
-
-    return true;
-}
+const largestEven = (arr) =>  Math.max(...arr.filter( (x) => x % 2 === 0));
 
 
-console.log(isAscending([1,2,3,4,5]));
-console.log(isAscending([1,2,6,4,5]));
+console.log(largestEven([1,2,3,4,5]));
+console.log(largestEven([1,2,6,4,5]));
+console.log(largestEven([1,2,6,4,5,66,77,44]));
