@@ -28,6 +28,20 @@ const
 
 */ 
 
-const oddNumbers = (numbers) =>   numbers.filter( num => num % 2 !== 0).length;
+const oddNumbersUpToTheANumber = (num) => {
+    return Math.floor((num - 1) / 2) + 1;
+}
 
-console.log(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+const countOddNumbers = (numbers) =>   numbers.filter( num => num % 2 !== 0).length;
+
+const creatArrayOfNumbers = (num) => {
+    const array = [] ;
+
+    for(let i = 1 ; i <= num ; i++) {
+        array.push(i);
+    }
+    return array;
+}
+
+console.log(countOddNumbers(creatArrayOfNumbers(130)));
+console.log(oddNumbersUpToTheANumber(130));
