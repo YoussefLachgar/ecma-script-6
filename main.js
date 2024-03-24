@@ -28,7 +28,11 @@ const
 
 */ 
 
-const replaceFirstDigit = (str) =>  str.replace(/[0-9]/, '$');
+const isAleapYear = (year) =>  year % 4 === 0;
 
 
-console.log(replaceFirstDigit('htyr1hg5'));
+console.log(isAleapYear(2014));
+console.log(isAleapYear(2015));
+console.log(isAleapYear(2016));
+console.log(isAleapYear(2017));
+console.log(isAleapYear(2018));
