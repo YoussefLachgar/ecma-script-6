@@ -28,11 +28,13 @@ const
 
 */ 
 
-const isAleapYear = (year) =>  year % 4 === 0;
+const obgA = { a: 1, b: 2, c: 3}
+const obgB = { a: 1, b: 2, c: 3}
+const obgC = { a: 1,  d: 4}
+
+const objectEquals = (a, b) =>  Object.keys(a).every(key => b[key]);
 
 
-console.log(isAleapYear(2014));
-console.log(isAleapYear(2015));
-console.log(isAleapYear(2016));
-console.log(isAleapYear(2017));
-console.log(isAleapYear(2018));
+console.log(objectEquals(obgA, obgB));
+console.log(objectEquals(obgC, obgB));
+console.log(objectEquals(obgA, obgC));
