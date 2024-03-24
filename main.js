@@ -28,13 +28,11 @@ const
 
 */ 
 
-const obgA = { a: 1, b: 2, c: 3}
-const obgB = { a: 1, b: 2, c: 3}
-const obgC = { a: 1,  d: 4}
+const parseCSV = (csvString) =>  csvString.split('\n').map(row => row.split(','))
 
-const objectEquals = (a, b) =>  Object.keys(a).every(key => b[key]);
+const str = `abc,def,ghi
+jkl,mro,pqr
+stu,vwx,vza`;
 
 
-console.log(objectEquals(obgA, obgB));
-console.log(objectEquals(obgC, obgB));
-console.log(objectEquals(obgA, obgC));
+console.log(parseCSV(str));
