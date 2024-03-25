@@ -39,5 +39,11 @@ const isEveryElem = (arr, fn) =>  {
 
 const isGretearThan0 = (x) => x > 0;
 
+const sortedStr = (str) => {
+    chars = str.split('');
+    chars.sort();
+    return chars.join('');
+}
 
-console.log(isEveryElem([0, 1, 2, 3], isGretearThan0));
+
+console.log(sortedStr('halolyabrow'));
