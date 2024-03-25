@@ -28,12 +28,16 @@ const
 
 */ 
 
-const getRandomHexNumber = () => Math.floor( Math.random() * 16).toString(16);
+const isEveryElem = (arr, fn) =>  {
+    for (let i = 0; i < arr.length; i++) {
+        if(!fn(arr[i])){
+            return false;
+        }
+    }
+    return true;
+}
 
-const getRandomHexColor = () => '#' + Array.from({length: 6}).map(getRandomHexNumber).join('');
+const isGretearThan0 = (x) => x > 0;
 
 
-console.log(getRandomHexColor());
-console.log(getRandomHexColor());
-console.log(getRandomHexColor());
-console.log(getRandomHexColor());
+console.log(isEveryElem([0, 1, 2, 3], isGretearThan0));
