@@ -28,11 +28,12 @@ const
 
 */ 
 
-const parseCSV = (csvString) =>  csvString.split('\n').map(row => row.split(','))
+const getRandomHexNumber = () => Math.floor( Math.random() * 16).toString(16);
 
-const str = `abc,def,ghi
-jkl,mro,pqr
-stu,vwx,vza`;
+const getRandomHexColor = () => '#' + Array.from({length: 6}).map(getRandomHexNumber).join('');
 
 
-console.log(parseCSV(str));
+console.log(getRandomHexColor());
+console.log(getRandomHexColor());
+console.log(getRandomHexColor());
+console.log(getRandomHexColor());
