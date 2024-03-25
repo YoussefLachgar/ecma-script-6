@@ -45,5 +45,15 @@ const sortedStr = (str) => {
     return chars.join('');
 }
 
+const countVowels = (str) => {
+    let count = 0;
+    str.split('').forEach( (char) => {
+        if(char === 'a' || char === 'i' || char === 'e' || char === 'u' || char === 'o') 
+            return count++;
+    })
 
-console.log(sortedStr('halolyabrow'));
+    return count;
+}
+
+
+console.log(countVowels('halolyabrow'));
