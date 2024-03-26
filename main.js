@@ -70,5 +70,7 @@ const switchToCoins = (amount, coins = [10, 5, 2, 1]) => {
     return totalCoins;
 }
 
+const removeCharacter = (str, char) => str.split(char).join('');
 
-console.log(switchToCoins(77));
+
+console.log(extractCharacter('heelfeo','e'));
