@@ -75,5 +75,6 @@ const removeCharacter = (str, char) => str.split(char).join('');
 const getUniqueChares = (str) =>
     [... new Set(str.split(''))];
 
+const getCharASCII = (c) => String.fromCharCode(c).toString();
 
-console.log(getUniqueChares('hello world'));
+console.log(getCharASCII(77));
