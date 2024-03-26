@@ -55,5 +55,20 @@ const countVowels = (str) => {
     return count;
 }
 
+const switchToCoins = (amount, coins = [10, 5, 2, 1]) => {
+   
+    const totalCoins = [];
+    for(let i = 0; i < coins.length; i++)
+    {
+        const thisCoinNum = Math.floor(amount/ coins[i]);
+        for(let j = 0; j < thisCoinNum; j++){
+            totalCoins.push(coins[i]);
+        }
 
-console.log(countVowels('halolyabrow'));
+        amount -= coins[i] * thisCoinNum;
+    }
+    return totalCoins;
+}
+
+
+console.log(switchToCoins(77));
