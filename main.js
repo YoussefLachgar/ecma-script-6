@@ -72,5 +72,8 @@ const switchToCoins = (amount, coins = [10, 5, 2, 1]) => {
 
 const removeCharacter = (str, char) => str.split(char).join('');
 
+const getUniqueChares = (str) =>
+    [... new Set(str.split(''))];
 
-console.log(extractCharacter('heelfeo','e'));
+
+console.log(getUniqueChares('hello world'));
