@@ -79,4 +79,28 @@ const getCharASCII = (c) => String.fromCharCode(c).toString();
 
 const getASCIIChar = (a) => a.charCodeAt(0);
 
-console.log(getASCIIChar('H'));
+const pointsOfTeam = (games) => {
+    let total = 0;
+    games.map(matchResult => {
+        let mr = matchResult.split(":");
+        if(mr[0] > mr[1]){
+            total += 3;
+        }
+        if(mr[0] < mr[1]){
+            total += 0;
+        }
+        if(mr[0] == mr[1]){
+            total += 1;
+        }
+
+    } );
+    return total;
+}
+
+const points = (games) => games.reduce((acc, game) => {
+    const [ x, y ] = game.split(':');
+    const points = x > y ? 3 : x === y ? 1 : 0;
+    return acc += points;
+},0);
+
+console.log(points(['0:2','3:1','2:2','1:3','0:2','3:3','1:2','2:1','1:2','2:2']));
