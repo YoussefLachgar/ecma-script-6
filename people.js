@@ -30,6 +30,13 @@ const olderThan30 = (peoples) =>
 
 // 3) Get a list of the people's full name (firstName and lastName).
 
+const addFullNameToList = (peoples) => peoples.map(
+    (person) =>
+        ({...person, fullName: `${person.firstName} ${person.lastName}`})
+);
+
+const getFullNameList = (peoples) => addFullNameToList(peoples).map(person => person.fullName);
+
 
 // 4) Get a list of people in the array ordered from youngest to oldest.
 
@@ -37,4 +44,4 @@ const olderThan30 = (peoples) =>
 // 5) How many people are there in each department?
 
 
-console.log(olderThan30(people));
+console.log(getFullNameList(people));
