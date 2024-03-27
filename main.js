@@ -77,6 +77,6 @@ const getUniqueChares = (str) =>
 
 const getCharASCII = (c) => String.fromCharCode(c).toString();
 
-const getASCIIChar = (c) => c.charCodeAt(0);
+const getASCIIChar = (a) => a.charCodeAt(0);
 
 console.log(getASCIIChar('H'));
