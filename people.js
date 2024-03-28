@@ -40,8 +40,12 @@ const getFullNameList = (peoples) => addFullNameToList(peoples).map(person => pe
 
 // 4) Get a list of people in the array ordered from youngest to oldest.
 
+const orderedYoungestOldest = (peoples) => peoples.sort((a, b) => new Date(a.DOB) - new Date(b.DOB));
+const orderedOldestYoungest  = (peoples) => peoples.sort((a, b) => new Date(b.DOB) - new Date(a.DOB));
+
 
 // 5) How many people are there in each department?
 
 
-console.log(getFullNameList(people));
+console.log(orderedYoungestOldest(people));
+console.log(orderedOldestYoungest(people));
