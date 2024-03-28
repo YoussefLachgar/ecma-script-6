@@ -33,7 +33,7 @@ const addTotalPriceProperty = () => orders.map(
 );
 
 
-// 3) Have all the orders been delivered? === false ? false : order.delivered
+// 3) Have all the orders been delivered? 
 
 const isAllOrdersDelivered = () => orders.reduce(
     (acc, order) => 
@@ -51,7 +51,9 @@ const isAllOrdersDelivered = () => orders.reduce(
 
 // 4) Has the customer with ID '123' made any orders?
 
+const hasCustomer = (customerId) => orders.some((order) => order.customerId === customerId);
+
 
 // 5) Have any products with an id of 123 been sold?
 
-console.log(isAllOrdersDelivered());
+console.log(hasCustomer('177'));
