@@ -55,5 +55,14 @@ const hasCustomer = (customerId) => orders.some((order) => order.customerId === 
 
 
 // 5) Have any products with an id of 123 been sold?
+const findProduct = (productId) => 
+    orders.some((order) => 
+        order.items.some((product) => 
+        product.productId === productId
+    )
+);
 
-console.log(hasCustomer('177'));
+
+
+
+console.log(findProduct('901'));
