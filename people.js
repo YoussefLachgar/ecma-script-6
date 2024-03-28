@@ -54,4 +54,4 @@ const peopleInDepartment = (peoples) =>
     );
 
 
-console.log(peopleInDepartment(people));
+// console.log(peopleInDepartment(people));
