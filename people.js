@@ -41,11 +41,17 @@ const getFullNameList = (peoples) => addFullNameToList(peoples).map(person => pe
 // 4) Get a list of people in the array ordered from youngest to oldest.
 
 const orderedYoungestOldest = (peoples) => peoples.sort((a, b) => new Date(a.DOB) - new Date(b.DOB));
+
+// 5) Get a list of people in the array ordered from oldest to youngest.
 const orderedOldestYoungest  = (peoples) => peoples.sort((a, b) => new Date(b.DOB) - new Date(a.DOB));
 
 
-// 5) How many people are there in each department?
+// 6) How many people are there in each department?
+
+const peopleInDepartment = (peoples) =>
+    peoples.reduce((acc, people) =>
+        ({...acc,[people.department]: acc[people.department] + 1 || 1 }),{}
+    );
 
 
-console.log(orderedYoungestOldest(people));
-console.log(orderedOldestYoungest(people));
+console.log(peopleInDepartment(people));
