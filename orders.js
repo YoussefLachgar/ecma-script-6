@@ -27,9 +27,26 @@ const getOrdersNotDelivered = (customerId) => orders.filter((order) => order.cus
 
 
 // 2) Create a new property on each order with the total price of items ordered.
+const addTotalPriceProperty = () => orders.map(
+    (order) =>
+        ({...order, totalPrice: order.items.reduce((acc, item) => acc += item.price, 0)})
+);
 
 
-// 3) Have all the orders been delivered?
+// 3) Have all the orders been delivered? === false ? false : order.delivered
+
+const isAllOrdersDelivered = () => orders.reduce(
+    (acc, order) => 
+    {
+        if(!(order.customerId in acc)){
+            acc[order.customerId] = true;
+        }
+
+        acc[order.customerId] = order.delivered && acc[order.customerId];
+        return acc;
+    }
+    ,{}
+);
 
 
 // 4) Has the customer with ID '123' made any orders?
@@ -37,4 +54,4 @@ const getOrdersNotDelivered = (customerId) => orders.filter((order) => order.cus
 
 // 5) Have any products with an id of 123 been sold?
 
-console.log(getOrdersNotDelivered('234'));
+console.log(isAllOrdersDelivered());
