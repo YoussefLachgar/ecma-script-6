@@ -68,6 +68,15 @@ const addFirstAndLastNameToComments = () => comments.map((comment) => {
 
 
 // 5) Get a list of the users who haven't commented
+const isComment = (user) => {
+    for (let i = 0; i < comments.length; i++) {
+        if(comments[i].userId === user.id) {
+            return true;
+        } 
+    }
+    return false;
+}
+const usersNotComment = () => users.filter((user) => !isComment(user));
 
 // Example usage
-console.log(addFirstAndLastNameToComments());
+console.log(usersNotComment());
