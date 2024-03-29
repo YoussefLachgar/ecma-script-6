@@ -52,6 +52,10 @@ const whoWroteComment = (comment) => users.find((user) => user.id === comment.us
 
 
 // 3) Which user commented 'OK great thanks'?
+const userByCommentText = (commentText) => {
+    const comment = comments.find((comment) => comment.text === commentText);
+    return comment ? users.find((user) => user.id === comment.userId) : 'comment not exists';
+}
 
 
 
@@ -62,5 +66,5 @@ const whoWroteComment = (comment) => users.find((user) => user.id === comment.us
 // 5) Get a list of the users who haven't commented
 
 // Example usage
-console.log(whoWroteComment(comments[0]));
-console.log(whoWroteComment(comments[1]));
+console.log(userByCommentText('OK great thanks'));
+console.log(userByCommentText('OK'));
