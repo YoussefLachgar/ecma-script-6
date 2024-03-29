@@ -60,11 +60,14 @@ const userByCommentText = (commentText) => {
 
 
 // 4) Add the user's first and last name to each comment in the comments array
+const addFirstAndLastNameToComments = () => comments.map((comment) => {
+    const user = whoWroteComment(comment);
+    return {...comment, userFirstName: user.firstName, userLastName: user.lastName};
+});
 
 
 
 // 5) Get a list of the users who haven't commented
 
 // Example usage
-console.log(userByCommentText('OK great thanks'));
-console.log(userByCommentText('OK'));
+console.log(addFirstAndLastNameToComments());
