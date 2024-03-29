@@ -47,6 +47,7 @@ const getUserId = (fullName) => {
 
 
 // 2) Who wrote the first comment (assuming the first comment is in position 0 of the comments array)
+const whoWroteComment = (comment) => users.find((user) => user.id === comment.userId);
 
 
 
@@ -61,5 +62,5 @@ const getUserId = (fullName) => {
 // 5) Get a list of the users who haven't commented
 
 // Example usage
-console.log(getUserId(['Madison', 'Marshall'])); // Output: 'b4a306cb-8b95-4f85-b9f8-434dbe010985'
-console.log(getUserId(['John', 'Doe']));
+console.log(whoWroteComment(comments[0]));
+console.log(whoWroteComment(comments[1]));
