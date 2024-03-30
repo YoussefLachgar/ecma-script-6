@@ -18,6 +18,12 @@ paragraph.innerHTML = paragraph.innerText.split(' ').map((word) => {
   (https://forcemipsum.com/)
 */
 
+const link = document.createElement('a');
+link.href = 'https://forcemipsum.com/';
+link.target = '_blank';
+link.textContent = 'this link is created using javascript';
+document.body.appendChild(link);
+
 
 /*
   Exercise 03
