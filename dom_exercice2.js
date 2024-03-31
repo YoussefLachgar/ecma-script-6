@@ -40,6 +40,27 @@ document.getElementById('confirmPassword').insertAdjacentElement('beforeBegin', 
   -----------
   Add a required validation to each input that shows an error message next to the entry if it does not have any text entered.
 */
+const spanLabel = document.createElement('span');
+spanLabel.textContent = "Required";
+spanLabel.classList.add('text-sm', 'font-medium', 'mb-1', 'text-red-500');
+
+const checkInput = (event) => {
+    const errorElement = Array.from(event.target.parentNode.querySelectorAll('span'));
+    // if (event.target.value === '') {
+    //     if (!errorElement.length) {
+    //         event.target.insertAdjacentElement('afterEnd', spanLabel);
+    //     }
+    // } else {
+    //     errorElement.forEach(el => el.remove());  // Remove existing error span
+    // }
+    if (event.target.value === '' && !errorElement.length) {
+        event.target.insertAdjacentHTML('afterEnd', '<span class="text-sm font-medium mb-1 text-red-500">Password</span>');
+    }
+}
+
+document.getElementById('username').addEventListener('blur', checkInput);
+document.getElementById('password').addEventListener('blur', checkInput);
+document.getElementById('confirmPassword').addEventListener('blur', checkInput);
 
 
 /*
