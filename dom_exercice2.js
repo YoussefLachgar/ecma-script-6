@@ -5,6 +5,35 @@
   Add a label to each of the input fields: username, password, confirm password
 */
 
+// username
+const usernameLabel = document.createElement('label');
+usernameLabel.textContent = "Username";
+usernameLabel.setAttribute('for', 'username');
+usernameLabel.classList.add('text-sm', 'font-medium', 'mb-1');
+
+document.getElementById('username').insertAdjacentElement('beforeBegin', usernameLabel);
+
+// password
+const passwordLabel = document.createElement('label');
+passwordLabel.textContent = "Password";
+passwordLabel.setAttribute('for', 'password');
+passwordLabel.classList.add('text-sm', 'font-medium', 'mb-1');
+
+document.getElementById('password').insertAdjacentElement('beforeBegin', passwordLabel);
+
+// confirm password
+const confirmPasswordLabel = document.createElement('label');
+confirmPasswordLabel.textContent = "Confirm Password";
+confirmPasswordLabel.setAttribute('for', 'confirmPassword');
+confirmPasswordLabel.classList.add('text-sm', 'font-medium', 'mb-1');
+
+document.getElementById('confirmPassword').insertAdjacentElement('beforeBegin', confirmPasswordLabel);
+
+
+// document.getElementById('password').insertAdjacentElement('beforeBegin', '<label for="password">Password</label>');
+// document.getElementById('confirmPassword').insertAdjacentElement('beforeBegin', '<label for="confirmPassword">Confirm Password</label>');
+
+
 
 /*
   Exercise 02
