@@ -135,5 +135,25 @@ document.getElementById('registrationForm').addEventListener('change',(event) =>
 When the user clicks the ‘Register’ button, a message should be displayed informing them of a successful user registration.
 */
 
+function handleRegistrationClick() {
+  const formRef = document.getElementById('registrationForm');
+  formRef.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const isValid = (confirmPasswordInput.value === passwordInput.value) && (passwordInput.value !== '') && (usernameInput.value !== '');
+    registerButton.setAttribute('disabled', true);
+    if(isValid){
+      setTimeout(() => {
+        alert("Registration successful!")
+      }, 3000);
+    }else{
+      setTimeout(() => {
+        alert("Registration failed!")
+      }, 3000);
+    }
+  });
+}
+
+handleRegistrationClick();
+
 
 
