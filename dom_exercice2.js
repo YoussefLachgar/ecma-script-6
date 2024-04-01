@@ -1,4 +1,3 @@
-/* JavaScript DOM Exercises 02 Tutorial: https://youtu.be/qQy5K-pE8Fo */
 /*
   Exercises 01
   ------------
