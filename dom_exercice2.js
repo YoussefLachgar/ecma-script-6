@@ -54,7 +54,7 @@ const checkInput = (event) => {
     //     errorElement.forEach(el => el.remove());  // Remove existing error span
     // }
     if (event.target.value === '' && !errorElement.length) {
-        event.target.insertAdjacentHTML('afterEnd', '<span class="text-sm font-medium mb-1 text-red-500">Password</span>');
+        event.target.insertAdjacentHTML('afterEnd', '<span class="text-sm font-medium mb-1 text-red-500">Required</span>');
     }
 }
 
@@ -68,6 +68,41 @@ document.getElementById('confirmPassword').addEventListener('blur', checkInput);
   -----------
   Add a further validation to check if the user input in the password and confirm password inputs match.  Show an error message if they do not.
 */
+
+function validateConfirmPassword(confirmPasswordElement, passwordElement, errorElementId = 'confirmPasswordErro') {
+  let errorElement = document.getElementById(errorElementId);
+  confirmPasswordElement.addEventListener('input', (event) => {
+    const password = passwordElement.value;
+    const confirmPassword = event.target.value;
+
+    // Si le mot de passe et la confirmation correspondent, supprimez l'élément d'erreur
+    if (confirmPassword === password) {
+      if (errorElement) {
+        errorElement.remove();
+      }
+      return;
+    }
+
+    // Si une erreur existe déjà, ne la recréez pas
+    if (confirmPassword !== password) {
+      if (!errorElement) {
+        errorElement = document.createElement('span');
+      }
+      errorElement.id = errorElementId;
+      errorElement.classList.add('text-sm', 'font-medium', 'mb-1', 'text-red-500');
+      confirmPasswordElement.insertAdjacentElement('afterend', errorElement);
+    }
+
+    // Mise à jour du texte de l'élément d'erreur
+    errorElement.textContent = 'Mot de passe non identique';
+  });
+}
+
+// Exemple d'utilisation
+const confirmPasswordInput = document.getElementById('confirmPassword');
+const passwordInput = document.getElementById('password');
+validateConfirmPassword(confirmPasswordInput, passwordInput);
+
 
 /*
   Exercise 04
