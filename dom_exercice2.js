@@ -4,6 +4,11 @@
   ------------
   Add a label to each of the input fields: username, password, confirm password
 */
+const usernameInput = document.getElementById('username');
+const confirmPasswordInput = document.getElementById('confirmPassword');
+const passwordInput = document.getElementById('password');
+const registerButton = document.getElementById('registerButton');
+registerButton.setAttribute('disabled', true);
 
 // username
 const usernameLabel = document.createElement('label');
@@ -11,7 +16,7 @@ usernameLabel.textContent = "Username";
 usernameLabel.setAttribute('for', 'username');
 usernameLabel.classList.add('text-sm', 'font-medium', 'mb-1');
 
-document.getElementById('username').insertAdjacentElement('beforeBegin', usernameLabel);
+usernameInput.insertAdjacentElement('beforeBegin', usernameLabel);
 
 // password
 const passwordLabel = document.createElement('label');
@@ -19,7 +24,7 @@ passwordLabel.textContent = "Password";
 passwordLabel.setAttribute('for', 'password');
 passwordLabel.classList.add('text-sm', 'font-medium', 'mb-1');
 
-document.getElementById('password').insertAdjacentElement('beforeBegin', passwordLabel);
+confirmPasswordInput.insertAdjacentElement('beforeBegin', passwordLabel);
 
 // confirm password
 const confirmPasswordLabel = document.createElement('label');
@@ -27,7 +32,7 @@ confirmPasswordLabel.textContent = "Confirm Password";
 confirmPasswordLabel.setAttribute('for', 'confirmPassword');
 confirmPasswordLabel.classList.add('text-sm', 'font-medium', 'mb-1');
 
-document.getElementById('confirmPassword').insertAdjacentElement('beforeBegin', confirmPasswordLabel);
+passwordInput.insertAdjacentElement('beforeBegin', confirmPasswordLabel);
 
 
 // document.getElementById('password').insertAdjacentElement('beforeBegin', '<label for="password">Password</label>');
@@ -58,9 +63,9 @@ const checkInput = (event) => {
     }
 }
 
-document.getElementById('username').addEventListener('blur', checkInput);
-document.getElementById('password').addEventListener('blur', checkInput);
-document.getElementById('confirmPassword').addEventListener('blur', checkInput);
+usernameInput.addEventListener('blur', checkInput);
+confirmPasswordInput.addEventListener('blur', checkInput);
+passwordInput.addEventListener('blur', checkInput);
 
 
 /*
@@ -79,6 +84,7 @@ function validateConfirmPassword(confirmPasswordElement, passwordElement, errorE
     if (confirmPassword === password) {
       if (errorElement) {
         errorElement.remove();
+        registerButton.removeAttribute('disabled');
       }
       return;
     }
@@ -99,8 +105,6 @@ function validateConfirmPassword(confirmPasswordElement, passwordElement, errorE
 }
 
 // Exemple d'utilisation
-const confirmPasswordInput = document.getElementById('confirmPassword');
-const passwordInput = document.getElementById('password');
 validateConfirmPassword(confirmPasswordInput, passwordInput);
 
 
@@ -109,6 +113,20 @@ validateConfirmPassword(confirmPasswordInput, passwordInput);
   -----------
 Ensure the ‘Register’ button is disabled until the user has entered valid data into all the input fields.  Once they have, the registration button should then be enabled.
 */
+
+const disabledRegistrationButton = (username ,confirmPassword ,password )=> {
+  const isValid = (confirmPassword.value === password.value) && (password.value !== '') && (username.value !== '');
+  if(isValid){
+    registerButton.removeAttribute('disabled');
+  }else{
+    registerButton.setAttribute('disabled', true);
+  }
+}
+
+document.getElementById('registrationForm').addEventListener('change',(event) => {
+  disabledRegistrationButton(usernameInput, confirmPasswordInput, passwordInput);
+} );
+
 
 
 /*
