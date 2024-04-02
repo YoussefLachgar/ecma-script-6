@@ -25,6 +25,10 @@ parent.insertBefore(basicPlanDiv, proPlanDiv);
   To make the Pro plan have a stronger call to action, update the current 'Get started' button to be blue (#007bff) with white text and have the text 'Buy Now' 
 */
 
+const basicPlanButton  = document.querySelector('#basic-plan button');
+basicPlanButton.classList.add('bg-blue-700', 'text-white');
+basicPlanButton.textContent = 'Buy Now';
+
 
 /* 
   Exercise 04
