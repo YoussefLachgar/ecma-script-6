@@ -36,6 +36,20 @@ basicPlanButton.textContent = 'Buy Now';
   There is a special offer on at the moment offering 50% more storage on the Basic plan and 25% more on the Pro plan.
   Update the basic and pro plan cards to reflect the new storage amount being offered. 
 */
+const proPlanLiStorage = document.querySelector('#pro-plan li span');
+const basicPlanLiStorage = document.querySelector('#basic-plan li span');
+
+const extractStorageValue = (textContent) => {
+  const regex = /\d+/; // Matches one or more digits
+  const match = regex.exec(textContent);
+  return match ? parseInt(match[0]) : 0; // Return 0 if no digits found
+};
+
+proPlanLiStorage.textContent = extractStorageValue(proPlanLiStorage.textContent) * 1.5;
+basicPlanLiStorage.textContent = extractStorageValue(basicPlanLiStorage.textContent) * 1.25;
+
+console.log(proPlanLiStorage);
+console.log(basicPlanLiStorage);
 
 
 /* 
