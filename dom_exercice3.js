@@ -12,6 +12,11 @@ document.querySelector('#pro-plan ul')
   -----------
   To make the ordering of the plans more logical, using JavaScript, move the basic plan to be before (to the left) of the pro plan.
 */
+const proPlanDiv = document.querySelector('#pro-plan');
+const basicPlanDiv = document.querySelector('#basic-plan');
+const parent = basicPlanDiv.parentNode;
+parent.insertBefore(basicPlanDiv, proPlanDiv);
+
 
 
 /* 
