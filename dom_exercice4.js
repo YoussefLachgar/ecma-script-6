@@ -22,6 +22,9 @@ Exercise 3
 --------------
 Move the ‘Services’ menu item to be before the ‘About’ menu item (after Home).
 */
+const services = document.querySelector('.menu ul li:nth-child(3)');
+const about = document.querySelector('.menu ul li:nth-child(2)');
+about.insertAdjacentElement('beforeBegin', services);
 
 /*
   Exercise 04
