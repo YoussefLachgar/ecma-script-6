@@ -3,6 +3,9 @@ Exercise 1
 --------------
 Move the contents of the two paragraphs into one single <p> tag.  Ensure there are no empty <p> tags left on the page.
 */
+const paragraphs = document.querySelectorAll('p');
+paragraphs[1].insertAdjacentHTML('afterBegin', paragraphs[0].innerText);
+paragraphs[0].remove();
 
 /*
 Exercise 2
