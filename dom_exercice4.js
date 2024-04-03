@@ -31,9 +31,31 @@ about.insertAdjacentElement('beforeBegin', services);
   -----------
   Create the following new entries in the menu: FAQs, Pricing
 */
+const navMenu = document.querySelector('.menu ul');
+navMenu.insertAdjacentHTML('beforeEnd', '<li class="font-medium">FAQs</li><li class="font-medium">Pricing</li>');
 
 /*
 Exercise 5
 --------------
 Add a hover effect to the menu items so when the user hovers over them the background and font-size change.  (Must be done with JavaScript!)
 */
+
+const navMenuItems = Array.from(document.querySelectorAll('.menu ul li'));
+const menuList = document.querySelector('.menu ul');
+
+navMenuItems.forEach(item => {
+  item.addEventListener('mouseover', hoverEffect);
+  item.addEventListener('mouseleave', normalEffect);
+});
+
+function hoverEffect(event) {
+  const elem = event.target;
+  elem.style.backgroundColor = '#f2f2f2';
+  elem.style.fontSize = '20px';
+}
+
+function normalEffect(event) {
+  const elem = event.target;
+  elem.style.backgroundColor = '#fff';
+  elem.style.fontSize = '16px';
+}
