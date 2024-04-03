@@ -12,6 +12,10 @@ Exercise 2
 --------------
 Reduce the font-size of the paragraph text to be half the size of the menu text.
 */
+const menuItems = document.querySelector('.menu ul li');
+const paragraphFontSize = parseInt(window.getComputedStyle(menuItems).getPropertyValue('font-size'))/ 2;
+document.querySelector('p').classList.remove('text-xl');
+document.querySelector('p').setAttribute('font-size', paragraphFontSize);
 
 /*
 Exercise 3
