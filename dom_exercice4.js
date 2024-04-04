@@ -41,7 +41,6 @@ Add a hover effect to the menu items so when the user hovers over them the backg
 */
 
 const navMenuItems = Array.from(document.querySelectorAll('.menu ul li'));
-const menuList = document.querySelector('.menu ul');
 
 navMenuItems.forEach(item => {
   item.addEventListener('mouseover', hoverEffect);
