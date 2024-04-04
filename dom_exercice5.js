@@ -3,6 +3,15 @@
   -----------
   Add 3 additional jobs to the 'Jobs' section of the page by copying the template in the initial 'job-card'.
 */
+const job1 = document.querySelector('.jobs .job-card');
+const job2 = job1.cloneNode(true);
+const job3 = job1.cloneNode(true);
+const job4 = job1.cloneNode(true);
+console.log(job1);
+
+job1.insertAdjacentElement('afterEnd', job2);
+job1.insertAdjacentElement('afterEnd', job3);
+job1.insertAdjacentElement('afterEnd', job4);
 
 /*
   Exercise 02
