@@ -18,6 +18,9 @@ job1.insertAdjacentElement('afterEnd', job4);
   -----------
   Update the job titles of the new jobs to be: JavaScript Developer, Java Developer, Python Developer
 */
+job2.querySelector('h3').innerText = 'Python Developer';
+job3.querySelector('h3').innerText = 'Java Developer';
+job4.querySelector('h3').innerText = 'JavaScript Developer';
 
 /*
   Exercise 03
