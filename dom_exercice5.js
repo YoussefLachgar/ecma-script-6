@@ -38,6 +38,17 @@ numberOfJobs.innerText = jobs.length;
   -----------
   Configure the search input box to filter jobs listed to only match the text that has been provided in the search. Check for the search text in the job title heading.
 */
+document.querySelector('#search').addEventListener('keyup', (event) => {
+  const elem = event.target;
+  Array.from(document.querySelectorAll('.jobs .job-card')).forEach(job => {
+    const title = job.querySelector('h3').innerText;
+    if(!title.toLowerCase().includes(elem.value.toLowerCase())){
+      job.style.display = 'none';
+    }else {
+      job.style.display = 'block';
+    }
+  });
+});
 
 /*
   Exercise 05
