@@ -28,6 +28,11 @@ job4.querySelector('h3').innerText = 'JavaScript Developer';
   Update the number of jobs listed in the hero section to indicate how many jobs you have listed in the 'Jobs section'.
 */
 
+const jobs = document.querySelectorAll('.jobs .job-card');
+const numberOfJobs = document.querySelector('#jobs-listed span');
+numberOfJobs.innerText = jobs.length;
+
+
 /*
   Exercise 04
   -----------
