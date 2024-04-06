@@ -40,7 +40,12 @@ Array.from(document.querySelectorAll('table tr td:nth-child(1)')).forEach((col, 
   -----------
   Move the handle column including all of it's rows of contents to be the second column in the table (after the # column)
 */
+Array.from(document.querySelectorAll('table tr')).forEach(row => {
+    const handleColumn = row.querySelector('td:nth-child(4), th:nth-child(4)');
+    const indexColumn = row.querySelector('td:nth-child(1), th:nth-child(1)');
 
+    indexColumn.insertAdjacentElement('afterEnd', handleColumn);
+});
 
 /*
   Exercise 05
