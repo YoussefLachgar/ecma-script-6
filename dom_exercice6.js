@@ -27,6 +27,12 @@ document.querySelector('table tr:nth-child(4) td:nth-child(4)').innerText = '@di
   -----------
   Move Rosa Reed to the top of the table and ensure all the number entries in the first column are updated accordingly.
 */
+const rosa = document.querySelector('table tr:nth-child(4)');
+document.querySelector('table tr:nth-child(1)').insertAdjacentElement('afterEnd', rosa);
+
+Array.from(document.querySelectorAll('table tr td:nth-child(1)')).forEach((col, index) => {
+    col.innerText = index + 1;
+});
 
 
 /*
