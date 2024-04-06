@@ -3,6 +3,16 @@
   -----------
   Add a new row to the table with the details: 'Sean Reyes' (@sreyes)
 */
+const newRow = document.createElement('tr');
+['6','Sean','Reyes', '@sreyes'].forEach(colText => {
+    const col = document.createElement('td');
+    col.innerText = colText;
+
+    col.classList.add('px-6','py-4');
+    newRow.appendChild(col);
+});
+newRow.classList.add('border-b','hover:bg-gray-100');
+document.querySelector('table').appendChild(newRow);
 
 /*
   Exercise 02
