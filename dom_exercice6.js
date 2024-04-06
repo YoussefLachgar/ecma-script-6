@@ -19,6 +19,7 @@ document.querySelector('table').appendChild(newRow);
   ------------
   Update Leona Dixon's handle to @dixonl
 */
+document.querySelector('table tr:nth-child(4) td:nth-child(4)').innerText = '@dixonl';
 
 
 /*
