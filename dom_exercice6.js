@@ -50,5 +50,9 @@ Array.from(document.querySelectorAll('table tr')).forEach(row => {
 /*
   Exercise 05
   -----------
-  To make the table easier to read, make every other row on the table to have a darker, shaded colour e.g. #f2f2f2
+  To make the table easier to read, make every handle colum on the table to have a gray background and white text color.
 */
+
+Array.from(document.querySelectorAll('table tr td:nth-child(2)')).forEach(handleCol => {
+    handleCol.classList.add('bg-gray-500', 'text-white');
+});
