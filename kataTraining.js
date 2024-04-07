@@ -1,3 +1,4 @@
+// exercice 1:
 //   You and a friend have decided to play a game to drill your statistical intuitions. The game works like this:
 
 // You have a bunch of red and blue marbles. To start the game you grab a handful of marbles of each color and put them into the bag, keeping track of how many of each color go in. You take turns reaching into the bag, guessing a color, and then pulling one marble out. You get a point if you guessed correctly. The trick is you only have three seconds to make your guess, so you have to think quickly.
@@ -18,6 +19,7 @@ const guessBlue = (blueStart, redStart, bluePulled, redPulled) => {
   
 }
 
+// exercice 2:
 // Your task is to find the first element of an array that is not consecutive.
 
 // By not consecutive we mean not exactly 1 larger than the previous element of the array.
@@ -26,10 +28,13 @@ const guessBlue = (blueStart, redStart, bluePulled, redPulled) => {
 
 // If the whole array is consecutive then return null2.
 const firstNonConsecutive = (arr) => {
-  for(let i = 1; i < arr.length; i++){
-    if(arr[i-1] + 1 !== arr[i]){
-      return arr[i];
-    }
-  }
-  return null;
+  // for(let i = 1; i < arr.length; i++){
+  //   if(arr[i-1] + 1 !== arr[i]){
+  //     return arr[i];
+  //   }
+  // }
+  // return null;
+  const nonConsecutive = arr.find((item, index) => index !== 0 && arr[index - 1] + 1 !== arr[index]);
+  return nonConsecutive !== undefined ? nonConsecutive : null;
 }
+
