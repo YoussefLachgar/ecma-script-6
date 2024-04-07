@@ -45,10 +45,5 @@ const firstNonConsecutive = (arr) => {
 
 // Function should return true if it is possible and false if not.
 
-const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
-  if( distanceToPump <= (mpg * fuelLeft)){
-    return true;
-  }
-  return false;
-};
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => distanceToPump <= (mpg * fuelLeft);
 
