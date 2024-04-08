@@ -107,5 +107,12 @@ const soundCloudUser = () => {
  * 
  * Replace all the items in the array with a string value of 'deleted'
  */
+// const replaceArray = () => {
+//     return users.map(user => { return "deleted"});
+// }
 
-console.log(soundCloudUser());
+const replaceArray = () => {
+    return users.fill('deleted');
+}
+
+console.log(replaceArray());
