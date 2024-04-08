@@ -96,6 +96,11 @@ const position = () => {
  * 
  * Find the user object that has the 'soundcloud' email address
  */
+const soundCloudUser = () => {
+    return users.find(({email}) => {
+        return email.toLowerCase().includes('soundcloud');
+    })
+}
 
 /**
  * Exercise 05
@@ -103,4 +108,4 @@ const position = () => {
  * Replace all the items in the array with a string value of 'deleted'
  */
 
-console.log(position());
+console.log(soundCloudUser());
