@@ -68,7 +68,8 @@ console.log('helo world');
  * Find out how many users have an IP address in a Class A network
  * https://en.wikipedia.org/wiki/Classful_network
  */
-
+const num = users.filter(({ip_address}) => ip_address.split('.')[0] < 128).length;
+console.log(`the number of users have an IP address in a Class A networ : ${num}`);
 
 
 
