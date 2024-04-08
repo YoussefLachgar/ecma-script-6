@@ -69,10 +69,7 @@ console.log('helo world');
  * https://en.wikipedia.org/wiki/Classful_network
  */
 const num = users.filter(({ip_address}) => ip_address.split('.')[0] < 128).length;
-console.log(`the number of users have an IP address in a Class A networ : ${num}`);
-
-
-
+// console.log(`the number of users have an IP address in a Class A networ : ${num}`);
 
 
 /**
@@ -80,6 +77,14 @@ console.log(`the number of users have an IP address in a Class A networ : ${num}
  * 
  * Find the position in the array of the first  user object that has a Class B IP address
  */
+// >= 128 && firstOctet < 192
+
+const position = () => {
+    return users.findIndex(({ip_address}) => {
+        const firstOctet = parseInt(ip_address.split('.')[0]);
+        return firstOctet >= 128 && firstOctet < 192;
+    })
+}
 
 
 
@@ -92,13 +97,10 @@ console.log(`the number of users have an IP address in a Class A networ : ${num}
  * Find the user object that has the 'soundcloud' email address
  */
 
-
-
-
-
-
 /**
  * Exercise 05
  * 
  * Replace all the items in the array with a string value of 'deleted'
  */
+
+console.log(position());
