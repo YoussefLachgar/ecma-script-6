@@ -160,11 +160,20 @@ const allFriends = () => accounts.reduce((acc,curr) => {
     return [...acc, curr.friends.map(({name}) => name)].flat();
 },[]);
 
-console.log(allFriends());
 
 
- /**
-  * Exercise 05
-  * 
-  * Get a list of all the friends for all users who are younger than 30 AND have a balance more than $1500
-  */
+/**
+ * Exercise 05
+ * 
+ * Get a list of all the friends for all users who are younger than 30 AND have a balance more than $1500
+*/
+const allFriendsYouger = () => accounts.reduce((acc,curr) => {
+    // return [...acc, curr.friends.map(({name}) => name)].flat();
+    if(parseInt(curr.age) < 30){
+        return [...acc, curr.friends.map(({name}) => name)].flat();
+    }else{
+        return [...acc].flat();
+    }
+},[]);
+
+ console.log(allFriends());
