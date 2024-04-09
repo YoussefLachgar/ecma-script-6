@@ -136,7 +136,8 @@ const flatten = () => accounts[0].tags.flat();
   */
 
  const thereIsConsectetur = () => accounts[0].tags.flat().includes("consectetur");
- console.log(thereIsConsectetur());
+
+ 
 
 
  /**
@@ -144,6 +145,10 @@ const flatten = () => accounts[0].tags.flat();
   * 
   * Get a list of all the tags for all the accounts and join them together as a string separated by commas.
   */
+
+ const allTags = () => accounts.map( ({tags}) => tags.join(', ')).join(', ');
+
+ console.log(allTags());
 
 
 
