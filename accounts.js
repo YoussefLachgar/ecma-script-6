@@ -127,10 +127,6 @@ const accounts = [{
  
 const flatten = () => accounts[0].tags.flat();
 
-console.log(flatten());
-
-
-
 
 
  /**
@@ -139,10 +135,8 @@ console.log(flatten());
   * Check whether the tags for the first account includes the "consectetur" tag 
   */
 
-
-
-
-
+ const thereIsConsectetur = () => accounts[0].tags.flat().includes("consectetur");
+ console.log(thereIsConsectetur());
 
 
  /**
