@@ -148,14 +148,6 @@ const flatten = () => accounts[0].tags.flat();
 
  const allTags = () => accounts.map( ({tags}) => tags.join(', ')).join(', ');
 
- console.log(allTags());
-
-
-
-
-
-
-
 
  /**
   * Exercise 04
@@ -163,12 +155,9 @@ const flatten = () => accounts[0].tags.flat();
   * Get a list of all the friends for all the user's accounts as an array (don't worry about duplicates)
   */
 
+const allFriends = () => accounts.map(({friends}) => friends.map(({name}) => name)).flat();
 
-
-
-
-
-
+console.log(allFriends());
 
 
  /**
