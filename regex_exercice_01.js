@@ -22,14 +22,14 @@ const ex5 = 'You can contact me on Twitter @codebubb or james@juniordevelopercen
 // Exercise 03
 // Using a regex pattern, find the monetary value contained within the ex3 string.
 
-console.log(ex3.match(/\$\d{1,3}.\d\d/ig)[0]);
+// console.log(ex3.match(/\$\d{1,3}.\d\d/ig)[0]);
 
 
 
 // Exercise 04
 // Using a regex pattern, find the telephone number contained within the ex4 string.
 
-
+console.log(ex4.match(/(\d{3,4}\s?){3}/g));
 
 
 
