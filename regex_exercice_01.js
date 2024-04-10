@@ -29,10 +29,14 @@ const ex5 = 'You can contact me on Twitter @codebubb or james@juniordevelopercen
 // Exercise 04
 // Using a regex pattern, find the telephone number contained within the ex4 string.
 
-console.log(ex4.match(/(\d{3,4}\s?){3}/g));
+// console.log(ex4.match(/(\d{3,4}\s?){3}/g));
 
 
 
 
 // Exercise 05
 // Using a regex pattern, find the email address contained within the ex5 string.
+// james@juniordevelopercentral.com
+
+console.log(ex5.match(/[a-z]{1,}@[a-z]{1,}.[a-z]{1,}/ig));
+console.log(ex5.match(/\S+@\S+.\S+/ig)); // it's the same
