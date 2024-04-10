@@ -13,7 +13,7 @@ const ex5 = 'You can contact me on Twitter @codebubb or james@juniordevelopercen
 
 // Exercise 02
 // Using a regex pattern, remove all of the numbers from the ex2 string.
-console.log(ex2.replace(/[0-9]/ig, ''));
+// console.log(ex2.replace(/[0-9]/ig, '')); // we are replacing all numbers with empty string ('')
 
 
 
@@ -22,7 +22,7 @@ console.log(ex2.replace(/[0-9]/ig, ''));
 // Exercise 03
 // Using a regex pattern, find the monetary value contained within the ex3 string.
 
-
+console.log(ex3.match(/\$\d.\d\d/ig)[0]);
 
 
 
