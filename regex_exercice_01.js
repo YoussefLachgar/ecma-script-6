@@ -7,12 +7,13 @@ const ex5 = 'You can contact me on Twitter @codebubb or james@juniordevelopercen
 // Exercise 01
 // Using a regex pattern, get the 3 letter words in the ex1 string.
 
-console.log(ex1.match(/(^|\s)[a-z]{3}($|\s)/ig));
+// console.log(ex1.match(/(^|\s)[a-z]{3}($|\s)/ig));
 
 
 
 // Exercise 02
 // Using a regex pattern, remove all of the numbers from the ex2 string.
+console.log(ex2.replace(/[0-9]/ig, ''));
 
 
 
