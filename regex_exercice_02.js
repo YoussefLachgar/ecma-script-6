@@ -23,15 +23,15 @@ const sp = ex1.split(/(Grade\s\d)/g).filter(Boolean);
 // Exercise 03
 // Using a regex, get an array of numbers that are contained in the string (removing any symbols)
 
-console.log(ex3.match(/\d+/g));
+// console.log(ex3.match(/\d+/g));
 
 
 
 // Exercise 04
 // Using a regex, find out the name contained in the string (after the semicolon :)
 
-
-
+console.log(ex4.match(/:\s+(\w+)/)[1]);
+console.log(ex4.split(/:\s+/g)[1]);
 
 
 // Exercise 05
