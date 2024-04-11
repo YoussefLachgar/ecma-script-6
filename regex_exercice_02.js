@@ -7,8 +7,9 @@ const ex5 = `Did you find any droids? No, sir. If there were any on board, they 
 // Exercise 01
 // Using a regex, get an array of the grade values e.g. Grade 1, Grade 2 ...
 
-
-
+const sp = ex1.split(/(Grade\s\d)/g).filter(Boolean);
+// const spp = ex1.split(/Grade\s\d/g);
+console.log(sp);
 
 
 // Exercise 02
