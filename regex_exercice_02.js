@@ -9,7 +9,6 @@ const ex5 = `Did you find any droids? No, sir. If there were any on board, they 
 
 const sp = ex1.split(/(Grade\s\d)/g).filter(Boolean);
 // const spp = ex1.split(/Grade\s\d/g);
-console.log(sp);
 
 
 // Exercise 02
@@ -17,6 +16,8 @@ console.log(sp);
 
 
 
+console.log(ex2.match(/(agenda|age)/g) ? true : false);
+console.log(/age[nda]?/.test(ex2));
 
 
 // Exercise 03
